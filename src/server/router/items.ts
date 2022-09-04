@@ -25,9 +25,9 @@ export const itemsRouter = createRouter()
     .mutation("update", {
         input: z.object({
             id: z.string(),
-            name: z.string(),
-            isBought: z.boolean(),
-            isOnCart: z.boolean(),
+            name: z.string().optional(),
+            isBought: z.boolean().optional(),
+            isOnCart: z.boolean().optional(),
         }),
         async resolve({ ctx, input }) {
             const item = await ctx.prisma.item.update({
