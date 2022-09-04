@@ -22,7 +22,7 @@ export function CreateModal({refetch}: CreateModalProps) {
   
     return<>
         <input
-            className=""
+            className="text-zinc-800 bg-zinc-100 rounded-md p-2 m-2"
             type="text"
             value={itemName}
             onChange={(event) => setItemName(event.target.value)}

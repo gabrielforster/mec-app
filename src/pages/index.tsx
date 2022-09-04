@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 
       <main className="mx-auto max-w-[1100px] flex flex-col items-center">
         <CreateModal refetch={handleRefetch} />
-        <Dashboard isLoading={isLoading} data={data}/>
+        <Dashboard isLoading={isLoading} data={data} refetch={refetch}/>
       </main>
     </>
   );
