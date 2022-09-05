@@ -1,4 +1,3 @@
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import { trpc } from "@/utils/trpc";
@@ -7,9 +6,11 @@ import { Dashboard } from "@/components/Dashboard";
 import { CreateModal } from "@/components/CreateModal";
 
 const Home: NextPage = () => {
-  const {data, refetch, isLoading} = trpc.useQuery(["items.getAll"], {enabled: true});
-  
-  function handleRefetch(){
+  const { data, refetch, isLoading } = trpc.useQuery(["items.getAll"], {
+    enabled: true,
+  });
+
+  function handleRefetch() {
     refetch();
   }
 
@@ -29,7 +30,7 @@ const Home: NextPage = () => {
 
       <main className="mx-auto max-w-[1100px] flex flex-col items-center">
         <CreateModal refetch={handleRefetch} />
-        <Dashboard isLoading={isLoading} data={data} refetch={refetch}/>
+        <Dashboard isLoading={isLoading} data={data} refetch={refetch} />
       </main>
     </>
   );
