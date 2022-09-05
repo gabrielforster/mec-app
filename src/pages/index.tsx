@@ -10,6 +10,8 @@ const Home: NextPage = () => {
     enabled: true,
   });
 
+  const formatedData = data?.filter((item) => !item.isOnCart);
+
   function handleRefetch() {
     refetch();
   }
