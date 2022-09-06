@@ -32,7 +32,7 @@ const CartPage: NextPage = () => {
       </header>
 
       <main className="mx-auto max-w-[1100px] flex flex-col items-center">
-        <Dashboard isLoading={isLoading} itemsData={formatedData} refetch={refetch} />
+        <Dashboard isLoading={isLoading} itemsData={formatedData} refetch={handleRefetch} />
       </main>
     </>
   );
