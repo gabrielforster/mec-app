@@ -13,3 +13,10 @@ datasource db {
 model Example {
     id String @id @default(cuid())
 }
+
+model Item {
+    id String @id @default(cuid())
+    name String
+    isBought Boolean @default(false)
+    isOnCart Boolean @default(false)
+}
