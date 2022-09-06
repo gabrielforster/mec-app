@@ -36,7 +36,6 @@ const CartPage: NextPage = () => {
       </main>
     </>
   );
-
 };
 
 export default CartPage;
